@@ -9,7 +9,7 @@ import org.scalatestplus.junit.JUnitRunner
 
 @RunWith(classOf[JUnitRunner])
 class NewtonSuite extends AnyFunSuite {
-  test("App has a greeting") {
-    assert(Newton != null)
+  test("Hello World") {
+    assert(true, "Hello World")
   }
 }

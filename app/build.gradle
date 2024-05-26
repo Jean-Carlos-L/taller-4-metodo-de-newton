@@ -27,9 +27,9 @@ dependencies {
     implementation libs.guava
 
     // Use Scalatest for testing our library
-    testImplementation libs.junit
-    testImplementation libs.scalatest.v2.v13
-    testImplementation libs.junit.v4.v13.v2.v13
+    testImplementation 'junit:junit:4.13.2'
+    testImplementation 'org.scalatest:scalatest_2.13:3.2.16'
+    testImplementation 'org.scalatestplus:junit-4-13_2.13:3.2.2.0'
 
     // Need scala-xml at test runtime
     testRuntimeOnly libs.scala.xml.v2.v13
