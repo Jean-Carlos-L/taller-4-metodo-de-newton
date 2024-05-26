@@ -3,61 +3,8 @@
  */
 package org.example
 
-
-
 object Newton {
   def main(args: Array[String]): Unit = {
-    /*val derivada = derivar(expr, Atomo('x'))
-   println(mostrar(derivada)) // Debería imprimir: (0.0 + (1.0 * 4.0))
-
-   val valorEvaluado = evaluar(expr, Atomo('x'), 2.0)
-   println(valorEvaluado) // Debería imprimir: 11.0
-
-   val exprLimpia = limpiar(expr)
-   println(mostrar(exprLimpia)) // Debería imprimir lo mismo que expr, ya que ya está limpio*/
-
-    /*val expr: Expr = Resta(Prod(Atomo('x'), Atomo('x')), Numero(2))
-    println(mostrar(expr)) // Debería imprimir: ((x * x) - 2.0)
-
-    val ba = (f: Expr, a: Atomo, x: Double) => Math.abs(evaluar(f, a, x)) < 1e-6
-
-    val raiz = raizNewton(expr, Atomo('x'), 1.0, ba)
-    println(raiz) // Debería imprimir aproximadamente la raíz cuadrada de 2*/
+    println("Hello, world!")
   }
-
-
-
-
-
-
-
-/*  def limpiar(f: Expr): Expr = f match {
-    case Suma(Numero(0), e) => limpiar(e)
-    case Suma(e, Numero(0)) => limpiar(e)
-    case Resta(e, Numero(0)) => limpiar(e)
-    case Prod(Numero(1), e) => limpiar(e)
-    case Prod(e, Numero(1)) => limpiar(e)
-    case Prod(Numero(0), _) => Numero(0)
-    case Prod(_, Numero(0)) => Numero(0)
-    case Div(e, Numero(1)) => limpiar(e)
-    case Suma(e1, e2) => Suma(limpiar(e1), limpiar(e2))
-    case Resta(e1, e2) => Resta(limpiar(e1), limpiar(e2))
-    case Prod(e1, e2) => Prod(limpiar(e1), limpiar(e2))
-    case Div(e1, e2) => Div(limpiar(e1), limpiar(e2))
-    case Expo(e1, e2) => Expo(limpiar(e1), limpiar(e2))
-    case Logaritmo(e1) => Logaritmo(limpiar(e1))
-    case other => other
-  }*/
-
- /* def raizNewton(f: Expr, a: Atomo, x0: Double, ba: (Expr, Atomo, Double) => Boolean): Double = {
-    def iter(xi: Double): Double = {
-      if (ba(f, a, xi)) xi
-      else {
-        val fx = evaluar(f, a, xi)
-        val dfx = evaluar(derivar(f, a), a, xi)
-        iter(xi - fx / dfx)
-      }
-    }
-    iter(x0)
-  }*/
 }
