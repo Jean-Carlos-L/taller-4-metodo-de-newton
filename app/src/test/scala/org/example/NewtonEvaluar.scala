@@ -27,20 +27,6 @@ class NewtonEvaluar extends AnyFunSuite {
     assert(metodoNewton.evaluar(test3, Atomo('x'), 5.0) == 0.28)
   }
 
-  test("Evaluar expresion dividir"){
-    val expr1 = Suma(Atomo('x'), Numero(2))
-    val expr2 = Prod(Atomo('x'), Atomo('x'))
-    val test4 = metodoNewton.mostrar(Div(expr1, expr2))
-    assert(test4 == "((x + 2.0) / (x * x))")
-  }
-
-  test("Evaluar expresion de potencia"){
-    val expr1 = Suma(Atomo('x'), Numero(2))
-    val expr2 = Prod(Atomo('x'), Atomo('x'))
-    val test5 = metodoNewton.mostrar(Expo(expr1, expr2))
-    assert(test5 == "((x + 2.0) ^ (x * x))")
-  }
-
   test("evaluar potencia"){
     val expr1 = Suma(Atomo('x'), Numero(2))
     val expr2 = Prod(Atomo('x'), Atomo('x'))

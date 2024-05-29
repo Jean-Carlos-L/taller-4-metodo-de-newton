@@ -5,14 +5,16 @@ package org.example
 
 import org.scalameter._
 
+import scala.util.Random
+
 object Benchmarking {
+
   val metodoNewtonPar = new NewtonParelela()
   val metodoNewtonSeq = new MetodoNewton()
 
-  def main(args: Array[String]): Unit = {
-    // Crear una expresión compleja
-    // x^3 - 6x^2 + 11x - 6
-    val expr = Resta(
+  // Crear una expresión completa para evaluar de 10 términos
+  val expr = Resta(
+    Resta(
       Resta(
         Resta(
           Resta(
@@ -67,160 +69,158 @@ object Benchmarking {
                                                                                                             Resta(
                                                                                                               Resta(
                                                                                                                 Resta(
-                                                                                                                  Resta(
+                                                                                                                  Prod(
                                                                                                                     Prod(
-                                                                                                                      Prod(
-                                                                                                                        Atomo('x'),
-                                                                                                                        Atomo('x')
-                                                                                                                      ),
+                                                                                                                      Atomo('x'),
                                                                                                                       Atomo('x')
                                                                                                                     ),
-                                                                                                                    Prod(
-                                                                                                                      Numero(6.0),
-                                                                                                                      Prod(
-                                                                                                                        Atomo('x'),
-                                                                                                                        Atomo('x')
-                                                                                                                      )
-                                                                                                                    )
+                                                                                                                    Atomo('x')
                                                                                                                   ),
                                                                                                                   Prod(
-                                                                                                                    Numero(11.0),
-                                                                                                                    Atomo('x')
+                                                                                                                    Numero(6.0),
+                                                                                                                    Prod(
+                                                                                                                      Atomo('x'),
+                                                                                                                      Atomo('x')
+                                                                                                                    )
                                                                                                                   )
                                                                                                                 ),
-                                                                                                                Numero(6.0)
+                                                                                                                Prod(
+                                                                                                                  Numero(11.0),
+                                                                                                                  Atomo('x')
+                                                                                                                )
                                                                                                               ),
-                                                                                                              Numero(5.0)
+                                                                                                              Numero(6.0)
                                                                                                             ),
-                                                                                                            Numero(4.0)
+                                                                                                            Numero(5.0)
                                                                                                           ),
-                                                                                                          Numero(3.0)
+                                                                                                          Numero(4.0)
                                                                                                         ),
-                                                                                                        Numero(2.0)
+                                                                                                        Numero(3.0)
                                                                                                       ),
-                                                                                                      Numero(1.0)
+                                                                                                      Numero(2.0)
                                                                                                     ),
-                                                                                                    Numero(0.0)
+                                                                                                    Numero(1.0)
                                                                                                   ),
-                                                                                                  Numero(6.0)
+                                                                                                  Numero(0.0)
                                                                                                 ),
-                                                                                                Numero(5.0)
+                                                                                                Numero(6.0)
                                                                                               ),
-                                                                                              Numero(4.0)
+                                                                                              Numero(5.0)
                                                                                             ),
-                                                                                            Numero(3.0)
+                                                                                            Numero(4.0)
                                                                                           ),
-                                                                                          Numero(2.0)
+                                                                                          Numero(3.0)
                                                                                         ),
-                                                                                        Numero(1.0)
+                                                                                        Numero(2.0)
                                                                                       ),
-                                                                                      Numero(0.0)
+                                                                                      Numero(1.0)
                                                                                     ),
-                                                                                    Numero(6.0)
+                                                                                    Numero(0.0)
                                                                                   ),
-                                                                                  Numero(5.0)
+                                                                                  Numero(6.0)
                                                                                 ),
-                                                                                Numero(4.0)
+                                                                                Numero(5.0)
                                                                               ),
-                                                                              Numero(3.0)
+                                                                              Numero(4.0)
                                                                             ),
-                                                                            Numero(2.0)
+                                                                            Numero(3.0)
                                                                           ),
-                                                                          Numero(1.0)
+                                                                          Numero(2.0)
                                                                         ),
-                                                                        Numero(0.0)
+                                                                        Numero(1.0)
                                                                       ),
-                                                                      Numero(6.0)
+                                                                      Numero(0.0)
                                                                     ),
-                                                                    Numero(5.0)
+                                                                    Numero(6.0)
                                                                   ),
-                                                                  Numero(4.0)
+                                                                  Numero(5.0)
                                                                 ),
-                                                                Numero(3.0)
+                                                                Numero(4.0)
                                                               ),
-                                                              Numero(2.0)
+                                                              Numero(3.0)
                                                             ),
-                                                            Numero(1.0)
+                                                            Numero(2.0)
                                                           ),
-                                                          Numero(0.0)
+                                                          Numero(1.0)
                                                         ),
-                                                        Numero(6.0)
+                                                        Numero(0.0)
                                                       ),
-                                                      Numero(5.0)
+                                                      Numero(6.0)
                                                     ),
-                                                    Numero(4.0)
+                                                    Numero(5.0)
                                                   ),
-                                                  Numero(3.0)
+                                                  Numero(4.0)
                                                 ),
-                                                Numero(2.0)
+                                                Numero(3.0)
                                               ),
-                                              Numero(1.0)
+                                              Numero(2.0)
                                             ),
-                                            Numero(0.0)
+                                            Numero(1.0)
                                           ),
-                                          Numero(6.0)
+                                          Numero(0.0)
                                         ),
-                                        Numero(5.0)
+                                        Numero(6.0)
                                       ),
-                                      Numero(4.0)
+                                      Numero(5.0)
                                     ),
-                                    Numero(3.0)
+                                    Numero(4.0)
                                   ),
-                                  Numero(2.0)
+                                  Numero(3.0)
                                 ),
-                                Numero(1.0)
+                                Numero(2.0)
                               ),
-                              Numero(0.0)
+                              Numero(1.0)
                             ),
-                            Numero(6.0)
+                            Numero(0.0)
                           ),
-                          Numero(5.0)
+                          Numero(6.0)
                         ),
-                        Numero(4.0)
+                        Numero(5.0)
                       ),
-                      Numero(3.0)
+                      Numero(4.0)
                     ),
-                    Numero(2.0)
+                    Numero(3.0)
                   ),
-                  Numero(1.0)
+                  Numero(2.0)
                 ),
-                Numero(0.0)
+                Numero(1.0)
               ),
-              Numero(6.0)
+              Numero(0.0)
             ),
-            Numero(5.0)
+            Numero(6.0)
           ),
-          Numero(4.0)
+          Numero(5.0)
         ),
-        Numero(3.0)
+        Numero(4.0)
       ),
-      Numero(2.0)
-    )
+      Numero(3.0)
+    ),
+    Numero(2.0)
+  )
 
-    val expre2 = Suma(Prod(expr, Atomo('x')), expr)
-
-    val timeFinal = new Array[Double](10)
-
-    for (i <- 1 until 10) {
-      // Derivación sin paralelismo
-      val timeWithoutParallelism = withWarmer {
-        new Warmer.Default
-      } measure {
-        metodoNewtonSeq.raizNewton(expre2, Atomo('x'), i, metodoNewtonSeq.buenaAprox)
-      }
-      timeFinal(i) = timeWithoutParallelism.value
+  def benchmarkSequential(): Any = {
+    val time = withWarmer {
+      new Warmer.Default
+    } measure {
+      metodoNewtonSeq.raizNewton(expr, Atomo('x'), 9, metodoNewtonSeq.buenaAprox)
     }
-    println("Tiempo promedio sequencial: " + timeFinal.sum/10)
+    println(s"Tiempo promedio secuencial: ${time.value}")
 
-    for(i <- 1 until 10){
-      // Derivación con paralelismo
-      val timeWithParallelism = withWarmer {
-        new Warmer.Default
-      } measure {
-        metodoNewtonPar.raizNewton(expre2, Atomo('x'), i, metodoNewtonPar.buenaAprox)
-      }
-      timeFinal(i) = timeWithParallelism.value
-    }
-    println("Tiempo promedio paralelizacion: " + timeFinal.sum/10)
   }
+
+  def benchmarkParallel(): Any = {
+    val time = withWarmer {
+      new Warmer.Default
+    } measure {
+      metodoNewtonPar.raizNewton(expr, Atomo('x'), 9, metodoNewtonPar.buenaAprox)
+    }
+    println(s"Tiempo promedio paralelizacion: ${time.value}")
+  }
+
+  def main(args: Array[String]): Unit = {
+
+    Benchmarking.benchmarkSequential()
+    Benchmarking.benchmarkParallel()
+  }
+
 }
